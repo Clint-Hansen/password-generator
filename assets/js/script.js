@@ -25,7 +25,6 @@ function generatePassword() {
   || passwordLength < 8 
   || passwordLength > 128) {
     passwordLength = prompt("Please enter a password length between 8 and 128 characters long.");
-    alert("You have set your password length to be " + passwordLength + " characters long.")
   } 
   // character type selections
   let charType = [];
