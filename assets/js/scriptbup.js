@@ -14,8 +14,7 @@ let symbolsArray = ["!",'"',"#",'$',"%",'&',"'","(",")","*",'+',"-",".","/",":",
 function writePassword() {
   var password = generatePassword();
   passwordText.value = password;
-
-}
+};
 
 function generatePassword() {
   let passwordLength = "";
@@ -24,7 +23,7 @@ function generatePassword() {
   || passwordLength < 8 
   || passwordLength > 128) {
     passwordLength = prompt("Please enter a password length between 8 and 128 characters long.");
-    console.log("You password is " + passwordLength + " characters long.")
+    alert("You have set your password length to be " + passwordLength + " characters long.")
   } 
   
   let charType = [];
@@ -32,18 +31,22 @@ function generatePassword() {
   let lowercaseConfirm = confirm("Would you like to include lowercase characters in your password?");
   if (lowercaseConfirm) {
     charType = charType.concat(lowercaseArray);
+    alert("You have selected to include lowercase characters in your password.");
   }
   let uppercaseConfirm = confirm("Would you like to include uppercase characters in your password?");
   if (uppercaseConfirm) {
     charType = charType.concat(uppercaseArray);
+    alert("You have selected to include uppercase characters in your password.");
   }
   let numbersConfirm = confirm("Would you like to include numbers in your password?");
   if (numbersConfirm) {
     charType = charType.concat(numbersArray);
+    alert("You have selected to include numbers in your password.");
   }
   let symbolsConfirm = confirm("Would you like to include symbols in your password?");
   if (symbolsConfirm) {
     charType = charType.concat(symbolsArray);
+    alert("You have selected to include symbols in you password.")
   }
   let passwordArray = [];
   for(i = 0; i < passwordLength; i++) {
